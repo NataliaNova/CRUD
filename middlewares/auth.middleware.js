@@ -1,19 +1,3 @@
-/* const tokens = require('../config/tokens.config');
-
-module.exports.checkSession = (req, res, next) => {
-    const token = req.headers.cookie.split("=")[1];
-
-    const user = tokens.loadSession(token);
-   
-    if (!user) {
-       return res.status(401).json({ message: 'Unauthorized' });
-       }
-
-    req.user = user;
-
-    next();
-}  */
-
 const tokens = require('../config/tokens.config');
 const User = require('../models/user.model');
 
